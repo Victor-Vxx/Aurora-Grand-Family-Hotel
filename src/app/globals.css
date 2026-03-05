@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Beach Colors */
+  --ocean-blue: #06394e;
+  --ocean-blue-light: #0d5c7c;
+  --sand-beige: #f5f2eb;
+  --sand-dark: #d1bfae;
+  --ice-white: #fdfdfd;
+  
+  --background: var(--sand-beige);
+  --foreground: var(--ocean-blue);
+  
+  /* Utilities */
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-ocean: var(--ocean-blue);
+  --color-ocean-light: var(--ocean-blue-light);
+  --color-sand: var(--sand-beige);
+  --color-sand-dark: var(--sand-dark);
+  --color-ice: var(--ice-white);
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-outfit);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Base custom classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
