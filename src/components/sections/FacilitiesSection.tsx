@@ -3,12 +3,11 @@
 import { motion } from "framer-motion";
 
 const facilities = [
-    { id: 1, src: "/img-ext/img-exterior1.jpg", alt: "Restaurante", span: "md:col-span-2 md:row-span-2" },
+    { id: 1, src: "/img-ext/img-exterior10(restaurante).jpg", alt: "Restaurante", span: "md:col-span-2 md:row-span-2" },
     { id: 2, src: "/img-ext/img-exterior2.jpg", alt: "Área de Lazer", span: "col-span-1 row-span-1" },
-    { id: 3, src: "/img-ext/img-exterior3.jpg", alt: "Bar", span: "col-span-1 row-span-1" },
-    { id: 4, src: "/img-ext/img-exterior4.jpg", alt: "Lounge Exterior", span: "col-span-1 row-span-1" },
-    { id: 5, src: "/img-ext/img-exterior5.jpg", alt: "Jardim", span: "col-span-1 row-span-1" },
-    { id: 6, src: "/img-ext/img-exterior6.jpg", alt: "Espaço Kids", span: "md:col-span-2 col-span-1 row-span-1" },
+    { id: 3, src: "/img-qrt/img-quarto8(conforto).jpg", alt: "Conforto", span: "col-span-1 row-span-1" },
+    { id: 4, src: "/img-ext/img-exterior11(loung-ext).jpg", alt: "Lounge Exterior", span: "md:col-span-2 col-span-1 row-span-1" },
+    { id: 5, src: "/img-qrt/img-quarto7(toalha).jpg", alt: "Cada Detalhe", span: "md:col-span-2 col-span-1 row-span-1" },
 ];
 
 export default function FacilitiesSection() {

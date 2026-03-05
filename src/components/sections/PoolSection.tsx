@@ -46,9 +46,7 @@ export default function PoolSection() {
                         <span className="italic font-light text-sand-dark">Tranquilidade</span>
                     </h2>
                     <p className="text-white/90 font-sans font-light max-w-xl mx-auto text-base md:text-lg mb-12 drop-shadow-md">
-                        Piscina com borda infinita que se confunde com o horizonte.
-                        Relaxe em nossas espreguiçadeiras sentindo a brisa suave,
-                        sob o calor do sol com serviço de bar exclusivo.
+                        Relaxe em nossa elegante piscina ao ar livre, um espaço pensado para proporcionar conforto, tranquilidade e momentos especiais durante sua estadia. Com água cristalina e um ambiente moderno ao redor, a área da piscina é perfeita para um mergulho refrescante, aproveitar o sol ou simplesmente descansar em um cenário acolhedor e sofisticado.
                     </p>
 
                     <div className="h-px w-32 bg-white/30 mx-auto" />
