@@ -6,8 +6,8 @@ const culinaryImages = [
     { src: "/img-cln/img-culinaria.jpg", alt: "Café da manhã com vista", style: "col-span-2 row-span-2 aspect-square md:aspect-auto" },
     { src: "/img-cln/img-culinaria8.jpg", alt: "Pães Artesanais", style: "col-span-1 row-span-1 aspect-square" },
     { src: "/img-cln/img-culinaria9.jpg", alt: "Frutas Frescas", style: "col-span-1 row-span-1 aspect-square" },
-    { src: "/img-cln/img-culinaria4.jpg", alt: "Experiência Gastronômica", style: "col-span-2 md:col-span-1 row-span-1 aspect-[2/1] md:aspect-square" },
-    { src: "/img-cln/img-culinaria1.jpg", alt: "Drinks Tropicais", style: "col-span-2 md:col-span-1 row-span-1 aspect-[2/1] md:aspect-square" }
+    { src: "/img-cln/img-culinaria4.jpg", alt: "Experiência Gastronômica", style: "col-span-1 md:col-span-1 row-span-1 aspect-square" },
+    { src: "/img-cln/img-culinaria1.jpg", alt: "Drinks Tropicais", style: "col-span-1 md:col-span-1 row-span-1 aspect-square" }
 ];
 
 export default function CulinarySection() {
@@ -19,7 +19,7 @@ export default function CulinarySection() {
 
                     {/* Bento-style Image Grid */}
                     <div className="w-full lg:w-1/2 order-2 lg:order-1">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-fr h-[500px] md:h-[600px]">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-min">
                             {culinaryImages.map((img, index) => (
                                 <motion.div
                                     key={index}
