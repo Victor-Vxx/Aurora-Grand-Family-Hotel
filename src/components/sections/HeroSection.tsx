@@ -45,7 +45,8 @@ export default function HeroSection() {
                         className="text-white/90 font-sans text-lg md:text-xl max-w-2xl font-light mb-12 drop-shadow-md"
                     >
                         Onde a brisa do mar encontra a sofisticação que sua família merece.
-                        Acorde com o som das ondas.
+                        <br />
+                        A brisa do Mar em Peruíbe.
                     </motion.p>
 
                     <motion.a

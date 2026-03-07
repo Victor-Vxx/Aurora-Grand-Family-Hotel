@@ -12,11 +12,11 @@ import CtaSection from "@/components/sections/CtaSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aurora Grand Family Hotel | Sofisticação à Beira-Mar",
-  description: "Descubra o Aurora Grand Family Hotel em Peruíbe. Uma experiência única de luxo e conforto para sua família com vista para o mar.",
+  title: "Aurora Grand Family Hotel | Sofisticação e Conforto",
+  description: "Descubra o Aurora Grand Family Hotel em Peruíbe. Uma experiência única de luxo e conforto para sua família.",
   openGraph: {
     title: "Aurora Grand Family Hotel",
-    description: "Sofisticação e conforto à beira-mar em Peruíbe.",
+    description: "Sofisticação e conforto em Peruíbe.",
     images: ["/img-pcp/img-principal.jpg"],
   },
 };

@@ -26,7 +26,7 @@ export default function CtaSection() {
 
                     <h2 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-8">
                         Garanta sua experiência <br />
-                        <span className="italic font-light">à beira-mar.</span>
+                        <span className="italic font-light">à 350m da Praia de Peruíbe.</span>
                     </h2>
 
                     <p className="text-white/80 font-sans text-lg font-light leading-relaxed mb-12 max-w-xl mx-auto">

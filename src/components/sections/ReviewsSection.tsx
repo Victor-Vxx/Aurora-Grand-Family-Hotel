@@ -18,7 +18,7 @@ const reviews = [
     },
     {
         id: 3,
-        text: "Arquitetura linda e atendimento impecável. Acordar com o som do mar na Suíte Ocean View é uma memória que vou guardar para sempre.",
+        text: "Arquitetura linda e atendimento impecável. Acordar com a vista da Suíte Grand Family é uma memória que vou guardar para sempre.",
         author: "Elena Vasconcelos",
         location: "Lisboa, PT"
     }

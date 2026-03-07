@@ -19,7 +19,7 @@ export default function AboutSection() {
                             <span className="text-ocean-light tracking-[0.2em] uppercase text-xs font-sans mb-4 block">A Experiência</span>
                             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-ocean leading-tight mb-8">
                                 O refúgio perfeito <br className="hidden md:block" />
-                                <span className="italic font-light">à beira-mar</span>
+                                <span className="italic font-light">à 350m da Praia</span>
                             </h2>
 
                             <div className="space-y-6 text-foreground/80 font-sans text-lg font-light leading-relaxed">

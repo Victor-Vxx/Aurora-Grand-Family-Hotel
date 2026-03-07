@@ -38,7 +38,7 @@ export default function FacilitiesSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-foreground/70 font-sans font-light max-w-sm text-sm leading-relaxed"
                     >
-                        Ambientes integrados e sofisticados onde cada espaço foi desenhado para maximizar o conforto, promovendo encontros e relaxamento à beira-mar.
+                        Ambientes integrados e sofisticados onde cada espaço foi desenhado para maximizar o conforto, promovendo encontros e relaxamento.
                     </motion.p>
                 </div>
 
