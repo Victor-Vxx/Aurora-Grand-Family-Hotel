@@ -1,6 +1,6 @@
 import { MapPin, Instagram, Mail, Phone } from "lucide-react";
 
-const BOOKING_URL = "https://www.booking.com/hotel/br/grand-aurora.pt-br.html?aid=2127532&label=metagha-link-MRBR-hotel-15547767_dev-desktop_los-1_bw-25_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260329_ppt-&sid=537c405d99f98f9b648eb521b439e089&all_sr_blocks=1554776701_426617100_2_1_0&checkin=2026-03-29&checkout=2026-03-30&dest_id=15547767&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1554776701_426617100_2_1_0&hpos=1&matching_block_id=1554776701_426617100_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1554776701_426617100_2_1_0__29495&srepoch=1772732186&srpvid=d38a7bc99dfd022b&type=total&ucfs=1&";
+const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
 
 export default function Footer() {
     return (
@@ -14,7 +14,7 @@ export default function Footer() {
                         Uma experiência sofisticada e inesquecível à beira-mar. Descubra o verdadeiro significado de relaxamento e conforto.
                     </p>
                     <div className="flex space-x-4">
-                        <a href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-ocean transition-colors">
+                        <a href="https://www.instagram.com/auroragrandfamilyhotel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-ocean transition-colors">
                             <Instagram className="w-4 h-4" />
                         </a>
                     </div>
@@ -50,6 +50,16 @@ export default function Footer() {
                         <li className="flex items-center space-x-3">
                             <Phone className="w-5 h-5 flex-shrink-0" />
                             <span>(13) 98126-7251</span>
+                        </li>
+                        <li className="pt-4">
+                            <h4 className="font-sans uppercase text-[10px] tracking-[0.2em] text-white/40 mb-3">Reserve pelo WhatsApp</h4>
+                            <div className="bg-white p-2 rounded-sm inline-block shadow-lg">
+                                <img
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://wa.me/message/72YRQLT5HIUAE1"
+                                    alt="WhatsApp QR Code"
+                                    className="w-24 h-24"
+                                />
+                            </div>
                         </li>
                     </ul>
                 </div>

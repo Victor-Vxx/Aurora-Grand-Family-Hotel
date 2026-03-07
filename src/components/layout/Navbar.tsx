@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const BOOKING_URL = "https://www.booking.com/hotel/br/grand-aurora.pt-br.html?aid=2127532&label=metagha-link-MRBR-hotel-15547767_dev-desktop_los-1_bw-25_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260329_ppt-&sid=537c405d99f98f9b648eb521b439e089&all_sr_blocks=1554776701_426617100_2_1_0&checkin=2026-03-29&checkout=2026-03-30&dest_id=15547767&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1554776701_426617100_2_1_0&hpos=1&matching_block_id=1554776701_426617100_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1554776701_426617100_2_1_0__29495&srepoch=1772732186&srpvid=d38a7bc99dfd022b&type=total&ucfs=1&";
+const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ export default function Navbar() {
 
                     <div className="hidden lg:block">
                         <a
-                            href={BOOKING_URL}
+                            href={WHATSAPP_URL}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-all duration-300 ${isScrolled
@@ -108,7 +108,7 @@ export default function Navbar() {
                             </a>
                         ))}
                         <a
-                            href={BOOKING_URL}
+                            href={WHATSAPP_URL}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-8 px-8 py-4 bg-ocean text-white uppercase tracking-widest text-sm rounded-sm"

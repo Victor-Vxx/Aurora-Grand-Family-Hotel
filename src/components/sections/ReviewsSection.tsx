@@ -12,7 +12,7 @@ const reviews = [
     },
     {
         id: 2,
-        text: "Um refúgio de paz. A piscina com borda infinita é um espetáculo à parte, e o café da manhã com produtos regionais era o ponto alto das nossas manhãs.",
+        text: "Um refúgio de paz. A piscina ao ar livre é um espetáculo à parte, e o café da manhã com produtos regionais era o ponto alto das nossas manhãs.",
         author: "Ricardo Alcantara",
         location: "Belo Horizonte, MG"
     },

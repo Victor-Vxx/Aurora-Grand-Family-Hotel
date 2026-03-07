@@ -77,7 +77,7 @@ export default function CulinarySection() {
                                 className="mt-12 flex items-center gap-6"
                             >
                                 <div className="w-16 h-px bg-ocean/20" />
-                                <span className="font-serif text-sand-dark text-lg italic">Servido das 7h às 10h30</span>
+                                <span className="font-serif text-sand-dark text-lg italic">Servido das 8h30 às 10h</span>
                             </motion.div>
                         </motion.div>
                     </div>
