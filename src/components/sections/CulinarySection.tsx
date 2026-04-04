@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const culinaryImages = [
     { src: "/img-cln/img-culinaria.jpg", alt: "Café da manhã com vista", style: "col-span-2 row-span-2 aspect-square md:aspect-auto" },
@@ -29,13 +30,19 @@ export default function CulinarySection() {
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
                                     className={`relative overflow-hidden shadow-md group ${img.style}`}
                                 >
-                                    <motion.img
+                                    <motion.div
+                                        className="w-full h-full absolute inset-0 z-0"
                                         whileHover={{ scale: 1.05 }}
                                         transition={{ duration: 0.8, ease: "easeOut" }}
-                                        src={img.src}
-                                        alt={img.alt}
-                                        className="w-full h-full object-cover object-center"
-                                    />
+                                    >
+                                        <Image
+                                            src={img.src}
+                                            alt={img.alt}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover object-center"
+                                        />
+                                    </motion.div>
                                     {/* Subtle vignette for premium feel */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     <span className="absolute bottom-4 left-4 text-white font-sans text-xs tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">

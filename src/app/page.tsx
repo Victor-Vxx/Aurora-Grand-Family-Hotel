@@ -1,14 +1,16 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import FacilitiesSection from "@/components/sections/FacilitiesSection";
-import PoolSection from "@/components/sections/PoolSection";
-import CulinarySection from "@/components/sections/CulinarySection";
-import RoomsSection from "@/components/sections/RoomsSection";
-import ReviewsSection from "@/components/sections/ReviewsSection";
-import LocationSection from "@/components/sections/LocationSection";
-import CtaSection from "@/components/sections/CtaSection";
+import dynamic from "next/dynamic";
+
+const AboutSection = dynamic(() => import("@/components/sections/AboutSection"));
+const FacilitiesSection = dynamic(() => import("@/components/sections/FacilitiesSection"));
+const PoolSection = dynamic(() => import("@/components/sections/PoolSection"));
+const CulinarySection = dynamic(() => import("@/components/sections/CulinarySection"));
+const RoomsSection = dynamic(() => import("@/components/sections/RoomsSection"));
+const ReviewsSection = dynamic(() => import("@/components/sections/ReviewsSection"));
+const LocationSection = dynamic(() => import("@/components/sections/LocationSection"));
+const CtaSection = dynamic(() => import("@/components/sections/CtaSection"));
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

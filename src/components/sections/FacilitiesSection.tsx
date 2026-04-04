@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const facilities = [
     { id: 1, src: "/img-ext/img-exterior10(restaurante).jpg", alt: "Restaurante", span: "md:col-span-2 md:row-span-2" },
@@ -56,13 +57,19 @@ export default function FacilitiesSection() {
                             {/* Overlay on hover */}
                             <div className="absolute inset-0 bg-ocean/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
-                            <motion.img
+                            <motion.div
+                                className="w-full h-full absolute inset-0 z-0"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
-                                src={item.src}
-                                alt={item.alt}
-                                className="w-full h-full object-cover"
-                            />
+                            >
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover"
+                                />
+                            </motion.div>
 
                             <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20 bg-gradient-to-t from-black/60 to-transparent">
                                 <span className="text-white font-sans uppercase tracking-widest text-xs">
