@@ -12,7 +12,7 @@ import CtaSection from "@/components/sections/CtaSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aurora Grand Family Hotel | Sofisticação e Conforto",
+  title: "Hotel em Peruíbe | Aurora Grand Family Hotel | Sofisticação e Conforto",
   description: "Descubra o Aurora Grand Family Hotel em Peruíbe. Uma experiência única de luxo e conforto para sua família.",
   openGraph: {
     title: "Aurora Grand Family Hotel",
