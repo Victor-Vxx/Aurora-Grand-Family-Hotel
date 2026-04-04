@@ -1,4 +1,5 @@
 import { MapPin, Instagram, Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
 
@@ -14,7 +15,7 @@ export default function Footer() {
                         Uma experiência sofisticada e inesquecível à beira-mar. Descubra o verdadeiro significado de relaxamento e conforto.
                     </p>
                     <div className="flex space-x-4">
-                        <a href="https://www.instagram.com/auroragrandfamilyhotel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-ocean transition-colors">
+                        <a aria-label="Instagram" href="https://www.instagram.com/auroragrandfamilyhotel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-ocean transition-colors">
                             <Instagram className="w-4 h-4" />
                         </a>
                     </div>
@@ -54,9 +55,11 @@ export default function Footer() {
                         <li className="pt-4">
                             <h4 className="font-sans uppercase text-[10px] tracking-[0.2em] text-white/40 mb-3">Reserve pelo WhatsApp</h4>
                             <div className="bg-white p-2 rounded-sm inline-block shadow-lg">
-                                <img
+                                <Image
                                     src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://wa.me/message/72YRQLT5HIUAE1"
                                     alt="WhatsApp QR Code"
+                                    width={96}
+                                    height={96}
                                     className="w-24 h-24"
                                 />
                             </div>

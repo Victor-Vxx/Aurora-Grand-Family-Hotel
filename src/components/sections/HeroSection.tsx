@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
 
 export default function HeroSection() {
@@ -10,14 +10,21 @@ export default function HeroSection() {
             <section className="relative w-full h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <motion.img
+                    <motion.div
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 6, ease: "easeOut" }}
-                        src="/img-pcp/img-principal.jpg"
-                        alt="Aurora Grand Family Hotel - Visão Principal"
-                        className="w-full h-full object-cover"
-                    />
+                        className="absolute inset-0 w-full h-full"
+                    >
+                        <Image
+                            src="/img-pcp/img-principal.jpg"
+                            alt="Aurora Grand Family Hotel - Visão Principal"
+                            fill
+                            priority
+                            sizes="100vw"
+                            className="object-cover"
+                        />
+                    </motion.div>
                     <div className="absolute inset-0 bg-ocean/40 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
                 </div>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wifi, Tv, Wind, Refrigerator, ShowerHead, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
 
@@ -59,26 +60,34 @@ function RoomCarousel({ images, name }: { images: string[], name: string }) {
     return (
         <div className="relative aspect-[4/3] w-full overflow-hidden shadow-xl rounded-sm group">
             <AnimatePresence mode="wait">
-                <motion.img
+                <motion.div
                     key={currentIndex}
-                    src={images[currentIndex]}
-                    alt={`${name} - ${currentIndex + 1}`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full h-full object-cover object-center"
-                />
+                    className="absolute inset-0 w-full h-full"
+                >
+                    <Image
+                        src={images[currentIndex]}
+                        alt={`${name} - ${currentIndex + 1}`}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                        className="object-cover object-center"
+                    />
+                </motion.div>
             </AnimatePresence>
 
             <button
                 onClick={prevSlide}
+                aria-label="Foto Anterior"
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
             >
                 <ChevronLeft className="w-6 h-6" />
             </button>
             <button
                 onClick={nextSlide}
+                aria-label="Próxima Foto"
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
             >
                 <ChevronRight className="w-6 h-6" />

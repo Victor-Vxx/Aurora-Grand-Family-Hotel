@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 export default function AboutSection() {
     return (
         <section id="sobre" className="py-24 md:py-32 bg-sand overflow-hidden">
@@ -51,13 +51,19 @@ export default function AboutSection() {
                             className="absolute top-0 right-0 w-3/4 h-[60%] lg:h-[65%] z-10"
                         >
                             <div className="w-full h-full relative group overflow-hidden">
-                                <motion.img
+                                <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.6 }}
-                                    src="/img-fxd/img-faixada.jpg"
-                                    alt="Fachada do Aurora Grand Family Hotel"
-                                    className="w-full h-full object-cover object-center shadow-2xl"
-                                />
+                                    className="w-full h-full relative"
+                                >
+                                    <Image
+                                        src="/img-fxd/img-faixada.jpg"
+                                        alt="Fachada do Aurora Grand Family Hotel"
+                                        fill
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        className="object-cover object-center shadow-2xl"
+                                    />
+                                </motion.div>
                             </div>
                         </motion.div>
 
@@ -70,13 +76,19 @@ export default function AboutSection() {
                             className="absolute bottom-6 left-0 w-[55%] h-[45%] lg:h-[50%] z-20"
                         >
                             <div className="w-full h-full relative overflow-hidden ring-4 ring-sand/30 shadow-xl">
-                                <motion.img
+                                <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.6 }}
-                                    src="/img-fxd/img-faixada2.jpg"
-                                    alt="Detalhes da Pousada"
-                                    className="w-full h-full object-cover object-center"
-                                />
+                                    className="w-full h-full relative"
+                                >
+                                    <Image
+                                        src="/img-fxd/img-faixada2.jpg"
+                                        alt="Detalhes da Pousada"
+                                        fill
+                                        sizes="(max-width: 1024px) 50vw, 33vw"
+                                        className="object-cover object-center"
+                                    />
+                                </motion.div>
                             </div>
                         </motion.div>
 
@@ -89,13 +101,19 @@ export default function AboutSection() {
                             className="absolute -bottom-4 right-12 w-1/3 h-1/3 z-30 hidden md:block shadow-lg"
                         >
                             <div className="w-full h-full relative overflow-hidden border-8 border-sand">
-                                <motion.img
+                                <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.6 }}
-                                    src="/img-fxd/img-faixada3.jpg"
-                                    alt="Ambiente Externo"
-                                    className="w-full h-full object-cover object-center"
-                                />
+                                    className="w-full h-full relative"
+                                >
+                                    <Image
+                                        src="/img-fxd/img-faixada3.jpg"
+                                        alt="Ambiente Externo"
+                                        fill
+                                        sizes="(max-width: 1024px) 33vw, 20vw"
+                                        className="object-cover object-center"
+                                    />
+                                </motion.div>
                             </div>
                         </motion.div>
                     </div>
