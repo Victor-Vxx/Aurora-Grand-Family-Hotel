@@ -68,9 +68,9 @@ export default function ReviewsSection() {
 
                             <div className="mt-auto">
                                 <div className="h-px w-12 bg-ocean/20 mx-auto mb-4" />
-                                <h4 className="font-sans uppercase tracking-wider text-xs font-bold text-ocean mb-1">
+                                <h3 className="font-sans uppercase tracking-wider text-xs font-bold text-ocean mb-1">
                                     {review.author}
-                                </h4>
+                                </h3>
                                 <span className="font-sans text-[10px] uppercase tracking-widest text-foreground/50">
                                     {review.location}
                                 </span>

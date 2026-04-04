@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function PoolSection() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -25,10 +26,12 @@ export default function PoolSection() {
                 style={{ y }}
                 className="absolute inset-x-0 -top-[20%] -bottom-[20%] z-0"
             >
-                <img
+                <Image
                     src="/img-pcn/img-piscina4.jpg"
                     alt="Piscina Aurora Grand Family Hotel"
-                    className="w-full h-full object-cover object-center"
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-center"
                 />
                 {/* Dual gradient for elegant text contrast over water */}
                 <div className="absolute inset-0 bg-ocean/30 mix-blend-multiply" />
