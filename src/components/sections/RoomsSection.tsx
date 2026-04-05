@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wifi, Tv, Wind, Refrigerator, ShowerHead, ChevronLeft, ChevronRight } from "lucide-react";
+import { useBookingStore } from "@/store/useBookingStore";
 
-const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
+
 
 const rooms = [
     {
@@ -73,15 +74,17 @@ function RoomCarousel({ images, name }: { images: string[], name: string }) {
 
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+                aria-label="Foto anterior"
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-black/30 lg:bg-white/10 backdrop-blur-md flex items-center justify-center text-white lg:opacity-0 lg:group-hover:opacity-100 transition-opacity hover:bg-white/20"
             >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+                aria-label="Próxima foto"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-black/30 lg:bg-white/10 backdrop-blur-md flex items-center justify-center text-white lg:opacity-0 lg:group-hover:opacity-100 transition-opacity hover:bg-white/20"
             >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
             </button>
 
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
@@ -97,8 +100,10 @@ function RoomCarousel({ images, name }: { images: string[], name: string }) {
 }
 
 export default function RoomsSection() {
+    const { openBooking } = useBookingStore();
+
     return (
-        <section id="suites" className="py-24 md:py-32 bg-white">
+        <section id="suites" className="py-16 md:py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Section Header */}
@@ -164,14 +169,12 @@ export default function RoomsSection() {
                                         ))}
                                     </ul>
 
-                                    <a
-                                        href={WHATSAPP_URL}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <button
+                                        onClick={() => openBooking(room.id)}
                                         className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-ocean text-white uppercase tracking-widest text-xs hover:bg-ocean-light transition-colors duration-300 rounded-sm"
                                     >
                                         Consultar Disponibilidade
-                                    </a>
+                                    </button>
                                 </motion.div>
                             </div>
                         );

@@ -3,10 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useBookingStore } from "@/store/useBookingStore";
 
-const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
+
 
 export default function Navbar() {
+    const { openBooking } = useBookingStore();
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -61,26 +63,25 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden lg:block">
-                        <a
-                            href={WHATSAPP_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <button
+                            onClick={() => openBooking()}
                             className={`px-6 py-3 rounded-sm text-sm uppercase tracking-wider transition-all duration-300 ${isScrolled
                                 ? "bg-ocean text-white hover:bg-ocean-light"
                                 : "bg-white/20 backdrop-blur-sm text-white border border-white/50 hover:bg-white hover:text-ocean"
                                 }`}
                         >
                             Consultar Disponibilidade
-                        </a>
+                        </button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
                     <button
-                        className="lg:hidden z-50"
+                        className="lg:hidden z-50 p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
+                        aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         {mobileMenuOpen ? (
-                            <X className="w-6 h-6 text-ocean" />
+                            <X className="w-7 h-7 text-ocean" />
                         ) : (
                             <Menu className={`w-6 h-6 ${isScrolled ? "text-ocean" : "text-white drop-shadow-md"}`} />
                         )}
@@ -107,15 +108,15 @@ export default function Navbar() {
                                 {link.name}
                             </a>
                         ))}
-                        <a
-                            href={WHATSAPP_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-8 px-8 py-4 bg-ocean text-white uppercase tracking-widest text-sm rounded-sm"
-                            onClick={() => setMobileMenuOpen(false)}
+                        <button
+                            onClick={() => {
+                                setMobileMenuOpen(false);
+                                openBooking();
+                            }}
+                            className="mt-8 w-full block text-center px-8 py-4 bg-ocean text-white uppercase tracking-widest text-sm rounded-sm"
                         >
                             Consultar Disponibilidade
-                        </a>
+                        </button>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -9,6 +9,7 @@ import RoomsSection from "@/components/sections/RoomsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import LocationSection from "@/components/sections/LocationSection";
 import CtaSection from "@/components/sections/CtaSection";
+import BookingEngine from "@/components/ui/BookingEngine";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function Home() {
       <CtaSection />
 
       <Footer />
+      <BookingEngine />
     </main>
   );
 }

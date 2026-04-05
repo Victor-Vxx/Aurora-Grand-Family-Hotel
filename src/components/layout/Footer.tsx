@@ -1,8 +1,11 @@
-import { MapPin, Instagram, Mail, Phone } from "lucide-react";
+"use client";
 
-const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
+import { MapPin, Instagram, Phone } from "lucide-react";
+import { useBookingStore } from "@/store/useBookingStore";
 
 export default function Footer() {
+    const { openBooking } = useBookingStore();
+
     return (
         <footer className="bg-ocean text-white pt-20 pb-10">
             <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/20 pb-16">
@@ -52,14 +55,12 @@ export default function Footer() {
                             <span>(13) 98126-7251</span>
                         </li>
                         <li className="pt-4">
-                            <h4 className="font-sans uppercase text-[10px] tracking-[0.2em] text-white/40 mb-3">Reserve pelo WhatsApp</h4>
-                            <div className="bg-white p-2 rounded-sm inline-block shadow-lg">
-                                <img
-                                    src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://wa.me/message/72YRQLT5HIUAE1"
-                                    alt="WhatsApp QR Code"
-                                    className="w-24 h-24"
-                                />
-                            </div>
+                            <button
+                                onClick={() => openBooking()}
+                                className="w-full bg-white/10 border border-white/20 text-white py-3 px-6 uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-ocean transition-colors duration-300 rounded-sm"
+                            >
+                                Consultar Disponibilidade
+                            </button>
                         </li>
                     </ul>
                 </div>

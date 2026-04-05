@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const WHATSAPP_URL = "https://wa.me/message/72YRQLT5HIUAE1";
+import { useBookingStore } from "@/store/useBookingStore";
 
 export default function HeroSection() {
+    const { openBooking } = useBookingStore();
+
     return (
         <>
-            <section className="relative w-full h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden">
+            <section className="relative w-full h-[100dvh] min-h-[600px] flex items-center justify-center overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <motion.img
@@ -49,17 +50,15 @@ export default function HeroSection() {
                         A brisa do Mar em Peruíbe.
                     </motion.p>
 
-                    <motion.a
+                    <motion.button
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
-                        href={WHATSAPP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        onClick={() => openBooking()}
                         className="hidden md:inline-flex bg-white text-ocean px-10 py-4 uppercase tracking-widest text-sm hover:bg-sand transition-colors duration-300 shadow-xl"
                     >
                         Consultar Disponibilidade
-                    </motion.a>
+                    </motion.button>
                 </div>
 
                 {/* Scroll Indicator */}
@@ -82,14 +81,12 @@ export default function HeroSection() {
 
             {/* Mobile Fixed CTA */}
             <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-white/95 via-white/80 to-transparent pb-6 pt-10">
-                <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    onClick={() => openBooking()}
                     className="w-full flex justify-center items-center bg-ocean text-white py-4 uppercase tracking-widest text-sm shadow-[0_10px_40px_rgba(6,57,78,0.3)] rounded-sm active:scale-95 transition-transform"
                 >
                     Ver Disponibilidade
-                </a>
+                </button>
             </div>
         </>
     );
